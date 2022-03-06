@@ -13,7 +13,7 @@ extraparms:
 id: 2f79a549-a696-4ee5-ba1f-170090abf77b
 images:
     debug: sha256:26b15e990fd7a1ebab5fb6d70064c35b31667c4711688693e3c095104ca42a6e
-    release: ''
+    release: sha256:a941cb182af6d7fa66072382ab16459806c350d9f79958a08e8399e3315e6195
 imagetags:
     debug: drownedmosesuno_arm64v8-dotnet-uno-60_bullseye_debug_2f79a549-a696-4ee5-ba1f-170090abf77b
     release: drownedmosesuno_arm64v8-dotnet-uno-60_bullseye_release_2f79a549-a696-4ee5-ba1f-170090abf77b
