@@ -1,0 +1,132 @@
+devices:
+    common: []
+    debug: []
+    release: []
+dockercomposefile:
+    common: ''
+    debug: ''
+    release: ''
+extraparms:
+    common: {}
+    debug: {}
+    release: {}
+id: 2f79a549-a696-4ee5-ba1f-170090abf77b
+images:
+    debug: sha256:26b15e990fd7a1ebab5fb6d70064c35b31667c4711688693e3c095104ca42a6e
+    release: ''
+imagetags:
+    debug: drownedmosesuno_arm64v8-dotnet-uno-60_bullseye_debug_2f79a549-a696-4ee5-ba1f-170090abf77b
+    release: drownedmosesuno_arm64v8-dotnet-uno-60_bullseye_release_2f79a549-a696-4ee5-ba1f-170090abf77b
+modificationdate: '2022-03-06T03:07:04.422908'
+networks:
+    common: []
+    debug: []
+    release: []
+platformid: arm64v8-dotnet-uno-60_bullseye
+ports:
+    common: {}
+    debug: {}
+    release: {}
+privatekey: '-----BEGIN RSA PRIVATE KEY-----
+
+    MIIEpAIBAAKCAQEA9YYMQaRgPu3nUSqWKiUDfXY3rh2LRe9YdgSJYhy1fqACBbAU
+
+    SMbu/0nvB7qYSVDC72NR14jPv/b4Wy98ngokHnoVWPpfRTEL+dtrq7wLUou5WysX
+
+    UC9pcpNDe7Lq0BR6UNeYmZJj9q1hkU7OADKSHqXC6BbnbsqzfxP0V5+8GoKEXF/m
+
+    S8mWemRHRtO45YcNaLrWNDZKGKI/VOVI0ckEngbqMCXfmq6MOUSduTDExzatz3KS
+
+    9KViOwha2rFtJ+qAfdruynnzFFdzTRZBZvbvYgZqNCEwmMJyl6DyKMqT9n4xMuOc
+
+    qlnoJyM4Y7MK+r/0howd+jAjNBfZdcRpIMH0MQIDAQABAoIBABHACS7NtW+XP3vs
+
+    ukJ9vozZeRkLZcA+l4Sgu1XugWiQJNVIb477Ytft/mvun4fdYNpxsb8FUw+ryTS+
+
+    cCH01bumU9jE8RJNg3Ii3NvjkmX7WAExUlQnuVXhM6XDv5ofgOBLVer0XGm/Cyi4
+
+    K8hz34B7t2WUElM+ME/ln2qeT7kSxkIjhuznNWuvP3qNJKyyGaJu+RXAqaTAxpk4
+
+    ekFTd3cHtU8AAaZ6XbnLt2t8L9LFlTacct6/HH+tiEOz/9FjbGlBPlNkMNyHImjg
+
+    m/z2TXnBG37U8rCr/MvwBXcQPby44o5/nAZ24deFnZmgyDHCgxLz99/L/vgotf48
+
+    rZSJe+kCgYEA/deJOF/sYOMOrNTfZIwKV4iH1PTNpKePK9DbQ2EEMEcyP4lnDvR/
+
+    FGnB8AB831XTx3kYSz0USDnBzaS+7bg972NtMedTHichoOIlSZSjuGZG4xkFPkDN
+
+    euCcJpXcwdUUwStt3yBh90l8OgOTviSqYZf0CbvCrAUW1FJnGbk7qqsCgYEA95xo
+
+    Ze2xpIXmc8UFVk2qnoFlR6pL04IEhdiYCy2tVk++R4URH53dHQeEV4fhNjjLLkvj
+
+    jCoBhv9UK6vv7iASslmOSYzj0cEDTl1g378uqn/E3QTTB8KvnsiWtjoeFNxvNDIi
+
+    uFkTQ56uY6u+z1ixkjRYmgmzO4ZV8u6zqXZ83JMCgYBT2ixBDCbYhojlfNhirYQJ
+
+    EFfWeBuqZZN85NxZcKXikNI/fNMndIq6IolnD7IwUHjJ7u2ghQe7KCEmHmLXwkHr
+
+    X0vF7WVek4yfSbUJjmla06ZdBHnf66Y1DhdnA6BOA2Z8vSzpRRg3iPXZcC8Q46nI
+
+    3VpHENgo3PGCp8nZDIBySwKBgQCi7TzYjO3N1vmLhcF8R0CUaYot/MVGGBBHzfxF
+
+    prmeyHvo7YsV5bcfqdmQCu3K0tYG0ZKZoO4+WPWWgt0uL9Z9mmYAyX8CfuFhCBp9
+
+    P3xCXi44TDtbqOQMM+rPXzB6A438p1ynNp1xahFPriuwnajCDkWanfVcnokhf6Wi
+
+    RT/llwKBgQCQ2dg+7kf5U7CrAC1Gm1y4MjdsHLKLIVTkQFgh3PQ5A8iyRdNI1mAK
+
+    itWDWApki8/rUcNRl/YzOda+kYElCO2DhBNrS5iLHTQYac5gkUzNoNzcqmq3yxTa
+
+    27avx7YoM7bPYMgd99T31LjBk1B28nXTPUGzA/HrzxnHSs8DntTwBQ==
+
+    -----END RSA PRIVATE KEY-----
+
+    '
+props:
+    common:
+        appargs: ''
+        appname: drownedMosesUnO
+        arg: ''
+        buildcommands: ''
+        buildfiles: ''
+        command: ''
+        devpackages: ''
+        env: ''
+        expose: ''
+        extrapackages: ''
+        language: dotnet
+        preinstallcommands: ''
+        runtime: dotnet
+        sdkpostinstallcommands: ''
+        sdkpreinstallcommands: ''
+        targetcommands: ''
+        targetfiles: ''
+    debug:
+        arg: 'ARG SSHUSERNAME=#%application.username%#
+
+            '
+    release: {}
+publickey: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQD1hgxBpGA+7edRKpYqJQN9djeuHYtF71h2BIliHLV+oAIFsBRIxu7/Se8HuphJUMLvY1HXiM+/9vhbL3yeCiQeehVY+l9FMQv522urvAtSi7lbKxdQL2lyk0N7surQFHpQ15iZkmP2rWGRTs4AMpIepcLoFuduyrN/E/RXn7wagoRcX+ZLyZZ6ZEdG07jlhw1outY0NkoYoj9U5UjRyQSeBuowJd+arow5RJ25MMTHNq3PcpL0pWI7CFrasW0n6oB92u7KefMUV3NNFkFm9u9iBmo0ITCYwnKXoPIoypP2fjEy45yqWegnIzhjswr6v/SGjB36MCM0F9l1xGkgwfQx
+sdkimages:
+    debug: ''
+    release: ''
+sdkimagetags:
+    debug: ''
+    release: ''
+sdksshaddress:
+    debug: null
+    release: null
+shutdownscript:
+    common: ''
+    debug: ''
+    release: ''
+startupscript:
+    common: ''
+    debug: ''
+    release: ''
+username: torizon
+volumes:
+    common: {}
+    debug:
+        /home/torizon/drownedMosesUnO: /drownedMosesUnO,rw
+    release: {}
