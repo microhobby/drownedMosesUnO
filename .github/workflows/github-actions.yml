@@ -1,0 +1,62 @@
+
+name: Github Drowned Moses
+on: push
+jobs:
+  Build-app:
+    timeout-minutes: 360
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ${{ github.workspace }}/drownedMosesUno
+    steps:
+      -
+        name: Checkout repository
+        uses: actions/checkout@v2
+      -
+        name: Moses Up
+        run: |
+          cd ${{ github.workspace }}/moses-linux
+          echo "${{ github.workspace }}/moses-linux" >> $GITHUB_PATH
+          ./moses &
+          sleep 15
+      -
+        name: EULA Accept
+        run: |
+          tdskt platforms
+          tdskt eula nxp-la-opt-v5 setprop accepted true
+          tdskt platforms
+      -
+        name: Enable Emulation
+        run: |
+          tdskt -p enableemulation
+      -
+        name: Load Application
+        run: |
+          APPID=$(tdskt load ./appconfig_0/)
+          echo "APPID=$APPID" >> $GITHUB_ENV
+      -
+        name: Build dotnet Application
+        run: |
+          docker run --rm -t \
+            -v ${PWD}:/app \
+            mcr.microsoft.com/dotnet/sdk:5.0 \
+            bash -c "cd /app && dotnet build drownedMosesUnO.Skia.Gtk/drownedMosesUnO.Skia.Gtk.csproj"
+      -
+        name: Publish dotnet Application
+        run: |
+          docker run --rm -t \
+            -v ${PWD}:/app \
+            mcr.microsoft.com/dotnet/sdk:5.0 \
+            bash -c "cd /app && dotnet publish -r linux-arm64 -o appconfig_0/work/drownedMosesUnO drownedMosesUnO.Skia.Gtk/drownedMosesUnO.Skia.Gtk.csproj"
+      -
+        name: Build Release Container
+        run: |
+          tdskt -p application ${{ env.APPID }} build release
+      -
+        name: Dockerhub
+        run: |
+          docker login --username=${{ secrets.DOCKERHUB_USERNAME }} --password=${{ secrets.DOCKERHUB_PASSWORD }}
+          docker tag \
+            drownedmosesuno_arm64v8-dotnet-uno-60_bullseye_release_${{ env.APPID }}:latest \
+            ${{ secrets.DOCKERHUB_USERNAME }}/drownedmosesuno:latest
+          docker push ${{ secrets.DOCKERHUB_USERNAME }}/drownedmosesuno:latest
