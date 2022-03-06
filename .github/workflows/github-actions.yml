@@ -17,7 +17,7 @@ jobs:
         run: |
           cd ${{ github.workspace }}/moses-linux
           echo "${{ github.workspace }}/moses-linux" >> $GITHUB_PATH
-          ./moses &
+          sudo ./moses &
           sleep 15
       -
         name: EULA Accept
